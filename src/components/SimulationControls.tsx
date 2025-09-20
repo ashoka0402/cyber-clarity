@@ -1,7 +1,7 @@
 import { Shield, Globe, Database, Zap } from 'lucide-react';
 
 interface SimulationControlsProps {
-  onSimulateAnomaly: (type: 'login' | 'network' | 'data_theft') => void;
+  onSimulateAnomaly: (type: 'russia_login' | 'ddos_attack' | 'data_theft') => void;
 }
 
 export default function SimulationControls({ onSimulateAnomaly }: SimulationControlsProps) {
@@ -14,7 +14,7 @@ export default function SimulationControls({ onSimulateAnomaly }: SimulationCont
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         <button
-          onClick={() => onSimulateAnomaly('login')}
+          onClick={() => onSimulateAnomaly('russia_login')}
           className="flex items-center gap-3 p-3 bg-warning/10 hover:bg-warning/20 border border-warning/30 rounded-lg transition-all duration-200 hover:scale-105 group"
         >
           <Shield className="w-5 h-5 text-warning group-hover:animate-pulse" />
@@ -25,7 +25,7 @@ export default function SimulationControls({ onSimulateAnomaly }: SimulationCont
         </button>
 
         <button
-          onClick={() => onSimulateAnomaly('network')}
+          onClick={() => onSimulateAnomaly('ddos_attack')}
           className="flex items-center gap-3 p-3 bg-accent/10 hover:bg-accent/20 border border-accent/30 rounded-lg transition-all duration-200 hover:scale-105 group"
         >
           <Globe className="w-5 h-5 text-accent group-hover:animate-pulse" />

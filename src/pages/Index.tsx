@@ -1,4 +1,4 @@
-import { useSecurityData } from '@/hooks/useSecurityData';
+import { usePathwayStreams } from '@/hooks/usePathwayStreams';
 import MetricsPanel from '@/components/MetricsPanel';
 import EventStream from '@/components/EventStream';
 import AnomalyAlerts from '@/components/AnomalyAlerts';
@@ -6,7 +6,7 @@ import SimulationControls from '@/components/SimulationControls';
 import { Shield, Eye } from 'lucide-react';
 
 const Index = () => {
-  const { events, anomalies, metrics, simulateAnomaly } = useSecurityData();
+  const { events, anomalies, metrics, simulateAnomaly } = usePathwayStreams();
 
   return (
     <div className="min-h-screen bg-background p-4">
