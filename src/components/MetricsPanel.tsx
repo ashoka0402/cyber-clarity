@@ -1,8 +1,8 @@
 import { Shield, AlertTriangle, Activity, Database } from 'lucide-react';
-import { SecurityMetrics } from '@/types/security';
+import { DashboardMetrics } from '@/types/security';
 
 interface MetricsPanelProps {
-  metrics: SecurityMetrics;
+  metrics: DashboardMetrics;
 }
 
 interface MetricCardProps {
@@ -64,7 +64,7 @@ export default function MetricsPanel({ metrics }: MetricsPanelProps) {
       />
       <MetricCard
         title="Data Theft Alerts"
-        value={metrics.dataAnomalies}
+        value={metrics.dataTheftAnomalies}
         icon={<Database />}
         variant="danger"
       />

@@ -62,21 +62,14 @@ const AnomalyCard = ({ anomaly }: { anomaly: Anomaly }) => {
       
       <div className="mb-3">
         <p className="text-sm text-foreground leading-relaxed">
-          {anomaly.description}
+          {anomaly.explanation}
         </p>
-      </div>
-      
-      <div className="text-sm text-muted-foreground space-y-1 mb-3">
-        <div className="flex gap-4 text-xs">
-          <span>Confidence: {(anomaly.confidence * 100).toFixed(1)}%</span>
-          <span>Risk Score: {anomaly.riskScore}/100</span>
-        </div>
       </div>
       
       <div className="flex items-center gap-2 text-xs text-muted-foreground">
         <Clock className="w-3 h-3" />
         <span className="font-mono">
-          {new Date(anomaly.timestamp).toLocaleString()}
+          {anomaly.timestamp.toLocaleString()}
         </span>
         <span className="mx-1">•</span>
         <span className="font-mono">
